@@ -37,6 +37,6 @@ public class Main {
 
 
         Zoo zooWithMoreAnimals = MyZoo.comparerZoo(MyZoo, myZoo2);
-        System.out.println("Le zoo avec plus d'animaux est celui avec " + zooWithMoreAnimals.nbrAnimals + " animaux.");
+        System.out.println("the zoo with more animals number is" + zooWithMoreAnimals);
     }
 }
