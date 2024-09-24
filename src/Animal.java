@@ -4,7 +4,10 @@ public class Animal {
     public int age;
     public Boolean isMammal;
 
-    Animal (String family,String name,int age,Boolean isMammal){
+    public Animal() {
+    }
+
+    Animal (String family, String name, int age, Boolean isMammal){
         this.family=family;
         this.name=name;
         this.age=age;
