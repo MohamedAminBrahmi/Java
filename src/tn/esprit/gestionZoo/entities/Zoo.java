@@ -1,11 +1,48 @@
-import java.util.Arrays;
+package tn.esprit.gestionZoo.entities;
 
 public class Zoo {
     Animal[] animals;
-    public String city;
-    public String name;
-    public  final int NBRCAGES=25 ;
+    private String city;
+    private String name;
+    private  final int NBRCAGES=25 ;
     int nbrAnimals=0;
+
+
+    public Animal[] getAnimals() {
+        return animals;
+    }
+
+    public void setAnimals(Animal[] animals) {
+        this.animals = animals;
+    }
+
+    public String getCity() {
+        return city;
+    }
+
+    public void setCity(String city) {
+        this.city = city;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getNBRCAGES() {
+        return NBRCAGES;
+    }
+
+    public int getNbrAnimals() {
+        return nbrAnimals;
+    }
+
+    public void setNbrAnimals(int nbrAnimals) {
+        this.nbrAnimals = nbrAnimals;
+    }
 
     public Zoo() {
     }
@@ -26,15 +63,15 @@ public class Zoo {
 
     public boolean addAnimal(Animal animal) {
         int search=searchAnimal(animal);
-        if (search==-1){
+        if (search==-1 && !isZooFull()){
             animals[nbrAnimals] = animal;
             nbrAnimals++;
-            System.out.println("Animal adding done !!");
+            System.out.println("tn.esprit.gestionZoo.entities.Animal adding done !!");
 
             return true;
 
         }else {
-            System.out.println("this Animal is already here!!!");
+            System.out.println("this tn.esprit.gestionZoo.entities.Animal is already here!!!");
             return false;
         }
 
@@ -77,16 +114,16 @@ public class Zoo {
             return true;
 
         }else {
-            System.out.println("Animal not found to delete !!!");
+            System.out.println("tn.esprit.gestionZoo.entities.Animal not found to delete !!!");
             return false;
         }
 
     }
     public boolean isZooFull(){
         if(NBRCAGES<=nbrAnimals) {
-            System.out.println("the Zoo is full");
+            System.out.println("the tn.esprit.gestionZoo.entities.Zoo is full");
         }else {
-            System.out.println("the Zoo is not full");
+            System.out.println("the tn.esprit.gestionZoo.entities.Zoo is not full");
 
         }
         return true;
@@ -116,5 +153,6 @@ public class Zoo {
 
     }
     }
+
 
 }

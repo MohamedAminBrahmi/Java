@@ -1,4 +1,7 @@
-import java.util.Scanner;
+package tn.esprit.gestionZoo.main;
+
+import tn.esprit.gestionZoo.entities.Animal;
+import tn.esprit.gestionZoo.entities.Zoo;
 
 public class Main {
 
@@ -10,7 +13,7 @@ public class Main {
         System.out.println(lion);
         System.out.println(MyZoo.displayZoo());
         Animal  Bird =new Animal("Bird","Bird",1,true);
-        Animal  Duck =new Animal("Bird","Duck",2,true);
+        Animal Duck =new Animal("Bird","Duck",2,true);
         Animal  Ostrich =new Animal("Bird","Ostrich",4,true);
 
         myZoo2.addAnimal(Bird);
@@ -27,9 +30,9 @@ public class Main {
 
         int found=MyZoo.searchAnimal(Cat);
         if (found== -1){
-            System.out.println("Animal not found");
+            System.out.println("tn.esprit.gestionZoo.entities.Animal not found");
         }else {
-            System.out.println("Animal found in position : "+found);
+            System.out.println("tn.esprit.gestionZoo.entities.Animal found in position : "+found);
         }
         MyZoo.afficher();
         MyZoo.removeAnimal(Tiger);
