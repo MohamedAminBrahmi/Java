@@ -25,7 +25,11 @@ public class Penguin extends Aquatic{
                 ", age=" + super.getAge() +
                 ", isMammal=" + super.getMammal() +
                 ", habitat=" + super.getHabitat() +
-                "swimmingDepth=" + swimmingDepth +
+                ", swimmingDepth=" + swimmingDepth +
                 '}';
+    }
+
+    public void swim(){
+        System.out.println("This penguin is swimming.");
     }
 }
