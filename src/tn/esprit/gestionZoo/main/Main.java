@@ -2,7 +2,8 @@ package tn.esprit.gestionZoo.main;
 
 import tn.esprit.gestionZoo.entities.*;
 
-public class Main {
+
+public class Main{
 
     public static void main(String[] args) {
 
@@ -45,6 +46,34 @@ public class Main {
 
 
 
+        Zoo zoo = new Zoo("Ariana","Zoo");
+
+        try {
+
+            zoo.addAnimal(new Terrestrial("terrestrial","leon",15,true,4));
+
+
+            zoo.addAnimal(new Terrestrial("terrestrial","Tigre",14,true,4));
+
+            zoo.addAnimal(new Terrestrial("terrestrial","Ours",17,true,4));
+
+            zoo.addAnimal(new Terrestrial("terrestrial","Éléphant",25,true,4));
+
+
+        } catch (ZooFullException e) {
+            System.out.println(e.getMessage());
+        }
+        System.out.println("Nombre d'animaux : " + zoo.getNbrAnimals());
+
+        try {
+            lion.setAge(-1);
+
+        } catch (InvalidAgeException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+
 
 
 
@@ -64,4 +93,3 @@ public class Main {
 
 
     }
-}

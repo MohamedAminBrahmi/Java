@@ -30,9 +30,9 @@ public abstract class Animal {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(int age) throws InvalidAgeException {
         if (age<0){
-            throw new IllegalArgumentException("the age field must be positive");
+            throw new InvalidAgeException("the age field must be positive");
         }
         this.age = age;
     }
