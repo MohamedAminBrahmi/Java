@@ -1,6 +1,9 @@
 package tn.esprit.gestionZoo.main;
 
 import tn.esprit.gestionZoo.entities.*;
+import tn.esprit.gestionZoo.enums.Food;
+import tn.esprit.gestionZoo.exceptions.InvalidAgeException;
+import tn.esprit.gestionZoo.exceptions.ZooFullException;
 
 
 public class Main{
@@ -71,9 +74,14 @@ public class Main{
         } catch (InvalidAgeException e) {
             System.out.println(e.getMessage());
         }
+        Aquatic aqua=new Aquatic("aquatic","Pingi",12,false,"Ice");
+        aqua.eatMeat(Food.MEAT);
+        pingi1.eatMeat(Food.MEAT);
+        lion.eatPlantAndMeet(Food.BOTH);
+
+
+
     }
-
-
 
 
 

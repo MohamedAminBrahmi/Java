@@ -1,6 +1,9 @@
 package tn.esprit.gestionZoo.entities;
 
-public class Aquatic extends Animal{
+import tn.esprit.gestionZoo.enums.Food;
+import tn.esprit.gestionZoo.interfaces.Carnivore;
+
+public class Aquatic extends Animal implements Carnivore<Food> {
 
     private String habitat;
 
@@ -41,4 +44,10 @@ public class Aquatic extends Animal{
         }
         return false;
     }
+    @Override
+    public void eatMeat(Food meat){
+        System.out.println("this animal eats meat");
+
+    }
+
 }

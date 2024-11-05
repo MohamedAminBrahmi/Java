@@ -1,4 +1,4 @@
-package tn.esprit.gestionZoo.entities;
+package tn.esprit.gestionZoo.exceptions;
 
 public class ZooFullException extends Exception {
 

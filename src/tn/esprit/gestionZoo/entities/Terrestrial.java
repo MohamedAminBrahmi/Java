@@ -1,6 +1,9 @@
 package tn.esprit.gestionZoo.entities;
 
-public class Terrestrial extends Animal{
+import tn.esprit.gestionZoo.enums.Food;
+import tn.esprit.gestionZoo.interfaces.Omnivore;
+
+public class Terrestrial extends Animal implements Omnivore<Food> {
     private int nbrLegs;
 
     public int getNbrLegs() {
@@ -25,4 +28,11 @@ public class Terrestrial extends Animal{
                 ", nbrLegs=" + nbrLegs +
                 '}';
     }
+
+    public void eatPlantAndMeet(Food food){
+        System.out.println("this animal eats plants and meat");
+
+    }
+
+
 }

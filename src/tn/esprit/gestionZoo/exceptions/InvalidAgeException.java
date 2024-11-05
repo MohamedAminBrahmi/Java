@@ -1,4 +1,4 @@
-package tn.esprit.gestionZoo.entities;
+package tn.esprit.gestionZoo.exceptions;
 
 public class InvalidAgeException extends Exception {
     public InvalidAgeException() {

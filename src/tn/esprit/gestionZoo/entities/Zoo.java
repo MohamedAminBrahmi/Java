@@ -1,5 +1,7 @@
 package tn.esprit.gestionZoo.entities;
 
+import tn.esprit.gestionZoo.exceptions.ZooFullException;
+
 public class Zoo {
     Animal[] animals;
     private String city;
@@ -11,6 +13,8 @@ public class Zoo {
     private float maxDepth=0;
     int nbrPinguins=0;
     int nbrDolphins=0;
+
+
 
     public void setMaxDepth(int maxDepth) {
         this.maxDepth = maxDepth;
@@ -74,6 +78,7 @@ public class Zoo {
 
     public Zoo() {
     }
+
 
     public  String displayZoo(){
         return
